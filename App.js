@@ -1,12 +1,28 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-
-const heading = React.createElement(
-    "h1", 
-    {id: "heading"}, 
-    "Hello world!!"
+const Title =  () => (
+    <h1 className = "head" tabIndex="5" >
+    Namaste React
+    </h1> 
 );
-console.log(heading); //this heading is an object which contains type, props, children etc.
+
+const elem = (
+    <h2 className = "elem" tabIndex="5" >
+    Welcome to
+    </h2> 
+);
+
+const HeadingComponent =  () => (
+    <div>
+        <Title/>
+        <Tiltle></Tiltle>
+        {Title()}
+        <h2 className = "head" tabIndex="5" >
+        {elem} Episode - 03
+        </h2> 
+    </div>
+    
+);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(heading);
+root.render(<HeadingComponent/>);
